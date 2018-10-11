@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" maxHeight="480.0" maxWidth="640.0" minHeight="480.0" minWidth="640.0" prefHeight="480.0" prefWidth="640.0" snapToPixel="false" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controller">
+  <children>
+    <AnchorPane maxHeight="480.0" maxWidth="640.0" minHeight="480.0" minWidth="640.0" prefHeight="480.0" prefWidth="640.0" VBox.vgrow="ALWAYS">
+      <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="77.0" layoutY="-4.0" opacity="0.9" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="640.0" />
+            <TextField fx:id="inputA" layoutX="159.0" layoutY="195.0" prefHeight="26.0" prefWidth="170.0" promptText="Введите старший коэффициент" style="-fx-background-radius: 35; -fx-border-radius: 35;" styleClass="inputSlice" />
+            <TextField fx:id="inputB" layoutX="159.0" layoutY="243.0" prefHeight="21.0" prefWidth="170.0" promptText="Введите коэффициент b" style="-fx-background-radius: 35; -fx-border-radius: 35;" />
+            <TextField fx:id="inputC" layoutX="159.0" layoutY="290.0" prefHeight="22.0" prefWidth="170.0" promptText="Введите значение свободного члена" style="-fx-background-radius: 35; -fx-border-radius: 35;" />
+            <Button fx:id="sumbitButton" alignment="TOP_CENTER" cache="true" layoutX="259.0" layoutY="355.0" prefHeight="32.0" prefWidth="140.0" style="-fx-background-color: #0336FF; -fx-border-radius: 35; -fx-background-radius: 35;" text="Вычислить" textFill="WHITE" textOverrun="CLIP">
+               <font>
+                  <Font name="Oswald Regular" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Button>
+            <Separator layoutX="339.0" layoutY="191.0" orientation="VERTICAL" prefHeight="129.0" prefWidth="6.0" />
+            <Label layoutX="142.0" layoutY="194.0" text="a">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="141.0" layoutY="242.0" text="b">
+               <font>
+                  <Font size="17.0" />
+               </font></Label>
+            <Label layoutX="142.0" layoutY="289.0" text="c">
+               <font>
+                  <Font size="17.0" />
+               </font></Label>
+            <Label fx:id="labelWelcome" alignment="CENTER" contentDisplay="CENTER" layoutX="143.0" layoutY="19.0" text="Вычисление корней квадратного уравнения" textFill="WHITE">
+               <font>
+                  <Font name="Oswald Bold" size="20.0" />
+               </font>
+            </Label>
+            <CheckBox fx:id="isOnlySquareX" layoutX="361.0" layoutY="199.0" mnemonicParsing="false" selected="true" text="Строго квадратное уравнение">
+               <tooltip>
+                  <Tooltip text="Будет осуществляться проверка на старший коэфициент (a != 0)" />
+               </tooltip>
+            </CheckBox>
+            <CheckBox fx:id="isUsingD1" layoutX="361.0" layoutY="238.0" mnemonicParsing="false" selected="true" text="Использовать D1">
+               <tooltip>
+                  <Tooltip text="Если b % 2 == 0, то использовать формулу D1" />
+               </tooltip>
+            </CheckBox>
+            <Text layoutX="151.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Результат:" wrappingWidth="226.87066650390625">
+               <font>
+                  <Font size="20.0" />
+               </font></Text>
+            <Text fx:id="resultLabel" layoutX="151.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Введите данные и нажмите вычислить" wrappingWidth="398.87066650390625">
+               <font>
+                  <Font size="18.0" />
+               </font></Text>
+            <Button fx:id="buttonHelp" layoutX="604.0" layoutY="439.0" mnemonicParsing="false" pickOnBounds="false" style="-fx-background-radius: 90; -fx-border-radius: 90;" text="?">
+               <tooltip>
+                  <Tooltip text="*В поле ввода допускается использование букв &quot;d&quot;, &quot;f&quot; в конце числа." />
+               </tooltip></Button>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
